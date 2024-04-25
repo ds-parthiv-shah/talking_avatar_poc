@@ -17,7 +17,7 @@ def process_text():
     data = request.json
     text_query = data['text']
     resp = str(query_response(text_query))
-    specific_words = ["I'm sorry", "I'm unable","not explicitly defined","no information or context","no information","not mentioned"]
+    specific_words = ["I'm sorry", "I'm unable","not explicitly defined","no information or context","no information","not mentioned",'I am unable']
 
     # Check if specific words are contained in the response using list comprehension
     presence = [word for word in specific_words if word in resp]
