@@ -1,5 +1,6 @@
 
 # Talking avatar (backend poc)
+![image](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/bc0a0445-1d9b-4b2e-9696-6096ba1830e8)
 
 ## Installation
 
@@ -41,4 +42,5 @@ Response from GPT model
 
 ![Screenshot 2024-04-25 191417](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/47951775-183d-4a36-81aa-ff3ad1f37752){: width="400" height="200"}
 
-
+## Demo URL
+https://virtualagent.panamaxil.com/
