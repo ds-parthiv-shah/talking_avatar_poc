@@ -1,6 +1,10 @@
 
 # Talking avatar (backend poc)
-![image](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/bc0a0445-1d9b-4b2e-9696-6096ba1830e8)
+
+Introducing Our Revolutionary Talking Avatar: Powered by RAG, LlamaIndex, Redis DB, and OpenAI LLM
+
+At the heart of our Talking Avatar is RAG (Retrieval-Augmented Generation), an advanced natural language processing model that combines the power of retrieval-based and generative AI techniques. RAG allows our avatar to retrieve relevant information from vast knowledge bases and generate contextually relevant responses in real-time, enabling fluid and engaging conversations with users.
+![avatar](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/26774c6a-51ea-4d8b-b646-4849befa20a9)
 
 ## Installation
 
@@ -31,16 +35,16 @@ This will start flask server on port 5000
 ## Postman
 
 Set auth key
+![auth](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/05802012-664f-4010-90b1-60b2ab2d4295)
 
-![Screenshot 2024-04-25 191446](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/e05077c0-f2c1-448e-bb07-3eb1b60904ae){: width="400" height="200"}
 
 Get response from RAG
+![rag_resp](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/aeff0528-901a-4700-b3c9-f0b0f1f88c19)
 
-![image](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/71ea9186-7bde-4e92-b8e0-0e54241d1750){: width="400" height="200"}
 
 Response from GPT model
+![gpt_resp](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/5d7524d3-1b73-443f-a511-391c616146de)
 
-![Screenshot 2024-04-25 191417](https://github.com/ds-parthiv-shah/talking_avatar_poc/assets/117074142/47951775-183d-4a36-81aa-ff3ad1f37752){: width="400" height="200"}
 
 ## Demo URL
 https://virtualagent.panamaxil.com/
