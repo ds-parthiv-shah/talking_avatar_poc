@@ -1,8 +1,0 @@
-cd project/poc/talking_avatar
-source venv/bin/activate
-cd flask_app
-
-Start module hello with flask app build in: gunicorn -b 0.0.0.0:5000 hello:app &
-Check gunicorn running apps : ps aux | grep gunicorn
-Check app running on specific port (5000 for flask) : sudo lsof -i :5000
-To stop/kill process : kill pid pid
