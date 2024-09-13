@@ -4,7 +4,7 @@
 Introducing Our Revolutionary Talking Avatar: Powered by RAG, LlamaIndex, Redis DB, and OpenAI LLM
 
 At the heart of our Talking Avatar is RAG (Retrieval-Augmented Generation), an advanced natural language processing model that combines the power of retrieval-based and generative AI techniques. RAG allows our avatar to retrieve relevant information from vast knowledge bases and generate contextually relevant responses in real-time, enabling fluid and engaging conversations with users.
-![avatar](![alt text](image.png))
+![alt text](image.png)
 
 ## Installation
 
