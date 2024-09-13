@@ -35,7 +35,6 @@ reader = SimpleDirectoryReader(
         input_dir=data_folder,  # Set the input directory
         recursive=True,  # Enable recursive scanning through subdirectories
     )
-
 # Create an empty list to store all documents
 documents = []
 
@@ -43,17 +42,17 @@ documents = []
 for docs in reader.iter_data():
     for doc in docs:
         documents.append(doc)
-        
+
 # List comprehension to clean the text of each document in the 'documents' list
 cleaned_documents = [clean_text(doc.text) for doc in documents]
 document = Document(text="\n\n".join([doc for doc in cleaned_documents]))
 text_content = document.get_text()
-print(type(document))
-print(text_content)
+#print(type(document))
+#print(text_content)
 
 # Initialize an OpenAI language model (llm) with specific configurations
-llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1) # 0 to 2. When you set it higher, you'll get more random outputs.
-                                                    # When you set it lower, towards 0, the values are more deterministic.
+#llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1) # 0 to 2. When you set it higher, you'll get more random outputs.
+llm = OpenAI(model="gpt-4", temperature=0.1)# When you set it lower, towards 0, the values are more deterministic.
 
 # Create a ServiceContext object with default configurations
 # This context incorporates required settings and services for generating vector representations
@@ -75,7 +74,7 @@ pipeline = IngestionPipeline(
     index_name="talking_avatar",
     index_prefix="llama",
     redis_url="redis://10.10.7.193:16489",  # Default
-    overwrite=True,
+    #overwrite=True,
     #password = redis_password
 ),
     cache=IngestionCache(

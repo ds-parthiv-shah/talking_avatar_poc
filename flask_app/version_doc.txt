@@ -1,0 +1,13 @@
+Latest: hello.py
+
+
+Changes in latest:
+Introduced authentication for access
+Credentials:
+----------------
+username: admin
+password: HsXnk6q0QEhXzOjyDhfA
+
+Older versions
+1. hello_v1.py (oldest)
+2. hello_v2.py - more error handling words added to transfer flow better to gpt generated answers in case RAG fails.

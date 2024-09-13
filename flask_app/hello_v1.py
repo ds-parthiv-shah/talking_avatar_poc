@@ -17,22 +17,21 @@ def process_text():
     data = request.json
     text_query = data['text']
     resp = str(query_response(text_query))
-#    if "I'm sorry" or "I'm unable" in resp:
-#       response = client.completions.create(
-#            model="gpt-3.5-turbo-instruct",
-#            prompt=text_query,
-#            max_tokens=256)
-#       resp = response.choices[0].text.strip()
+    specific_words = ["I'm sorry", "I'm unable","not explicitly defined","no information or context","no information","not mentioned",'I am unable','The context provided does not contain']
 
-    if "I'm sorry" or "I'm unable" in resp:
+    # Check if specific words are contained in the response using list comprehension
+    presence = [word for word in specific_words if word in resp]
+    if  presence:
+         print('From GPT-4o')
          response = client.chat.completions.create(
-         model="gpt-4",
-         messages=[{"role": "user", "content": text_query}]
+         model="gpt-4o",
+         messages=[{"role": "user", "content": text_query}],
+         max_tokens = 256
+         
          )
          resp = response.choices[0].message.content        
 
     return jsonify({'Message': resp,'status':200})
-    #return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')

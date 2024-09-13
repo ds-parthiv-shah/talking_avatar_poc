@@ -11,25 +11,13 @@ from llama_index.vector_stores.redis import RedisVectorStore
 from llama_index.core import VectorStoreIndex, StorageContext
 from llama_index.llms.openai import OpenAI
 from concurrent_log_handler import ConcurrentRotatingFileHandler
-from flask_httpauth import HTTPBasicAuth
-from werkzeug.security import generate_password_hash, check_password_hash
+
 
 # Initialize OpenAI client
 client = opai()
 
 app = Flask(__name__)
 CORS(app)
-auth = HTTPBasicAuth()
-
-users = {
-    "admin": generate_password_hash("HsXnk6q0QEhXzOjyDhfA"),
-    "user": generate_password_hash("HDVU6M5stVCEN4r66MgG")
-}
-
-@auth.verify_password
-def verify_password(username, password):
-    if username in users and check_password_hash(users.get(username), password):
-        return username
 
 if not os.path.exists('/home/ubuntu/project/poc/talking_avatar/logs'):
     os.makedirs('/home/ubuntu/project/poc/talking_avatar/logs')
@@ -58,7 +46,6 @@ def query_response(query):
     return response
 
 @app.route('/query', methods=['POST'])
-@auth.login_required
 def process_text():
     try:
         # Get text from the request data

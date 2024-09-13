@@ -1,12 +1,14 @@
 -------------------------------------------------------------------------------------
-1. To Start Server
+1. To Start Server 
 
-cd project/poc/talking_avatar
-source venv/bin/activate
-cd flask_app
+To Start Server in Backend!
+(i) Login as root user
+(ii) startai.sh
 
-Start module hello with flask app build in: gunicorn -b 0.0.0.0:5000 hello:app &
-Check gunicorn running apps : ps aux | grep gunicorn
+To Stop Server from Backend!
+(i) killall -9 python
+
+
 Check app running on specific port (5000 for flask) : sudo lsof -i :5000
 To stop/kill process : kill pid pid
 
@@ -18,3 +20,12 @@ cd src/
 python index_data.py
 
 -------------------------------------------------------------------------------------
+3. OPENAI_API
+
+To set api key in environment
+add key to .env file
+-------------------------------------------------------------------------------------
+
+INFO
+
+backend python latest version - talking_avatar_poc\flask_app\hello.py
